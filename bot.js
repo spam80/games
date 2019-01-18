@@ -75,7 +75,7 @@ client.on('message', message => {
 	
 // كود تغيير الاسم والافتار وحالة اللعب
 	if(command == prefix + 'setname') {
-		let timecooldown = '1hour';
+		let timecooldown = '1second';
 		if(!devs.includes(message.author.id)) return;
 		if(cooldownSetName.has(message.author.id)) return message.reply(`**${ms(ms(timecooldown))}** يجب عليك الانتظار`);
 		if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setname \`\`RezfixBot\`\``).then(msg => msg.delete(7000));
